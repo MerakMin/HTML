@@ -1,0 +1,45 @@
+<html>
+   <head>
+   </head>
+   <body>
+      
+      <h2>Tabs</h2>
+      <p>Click on the buttons inside the tabbed menu:</p>
+      
+      <div class="tab">
+         <button class="tablinks" onclick="openCIty(this, 'London')">London</button>
+         <button class="tablinks" onclick="openCIty(this, 'Paris')">Paris</button>
+         <button class="tablinks" onclick="openCIty(this, 'Tokyo')">Tokyo</button>
+      </div>
+      
+      <div id="London" class="tabcontent">
+         <h3>London</h3>
+         <p>London is the capital city of England.</p>
+      </div>
+      
+      <div id="Paris" class="tabcontent">
+         <h3>Paris</h3>
+         <p>Pairs is the capital of France.</p>
+      </div>
+      
+      <div id="Tokyo" class="tabcontent">
+         <h3>Tokyo</h3>
+         <p>Tokyo is the capital of Japan.</p>
+      </div>
+      
+      <script>
+         function openCity(seltab, cityName)
+         let i, tahcontent, tablinks;
+         tabcontent = document.getElemenByClassName("tabcontent");
+         for (i = 0; i<tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+         }
+         tanlinks = document.getElementsByClassName("tablinks");
+         for(let value of tablinks) {
+            value.style.backgroundClolr = "inherit";
+         }
+         document.getElemenById(cityName).style.display = "block";
+         seltab.style.backgroundColor = "dodgerblue";
+      </script>
+   </body>
+</html>
